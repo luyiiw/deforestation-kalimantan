@@ -1,2 +1,2 @@
 # deforestation-kalimantan
-Exploring the extent of human-driven deforestation in Central Kalimantan, Indonesia. 
+Exploring the extent of agricultural-driven deforestation in Central Kalimantan, Indonesia. 
