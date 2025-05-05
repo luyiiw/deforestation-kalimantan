@@ -3,6 +3,9 @@ Author: Lu Yii Wong
 
 This project uses Sentinel-2 imagery and a Random Forest classifier to map burned areas in Central Kalimantan, Indonesia, following the 2019 fire season. The workflow involves satellite data preprocessing, training sample preparation, spectral index computation, and supervised classification.
 
+The methods for this project were inspired by "Refined burned-area mapping protocol using Sentinel-2 data increases estimate of 2019 Indonesian burning": https://essd.copernicus.org/articles/13/5353/2021/
+
+
 ---
 
 ## Study Area
