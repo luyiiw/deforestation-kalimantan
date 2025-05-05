@@ -21,6 +21,7 @@ This project uses Sentinel-2 imagery and a Random Forest classifier to map burne
 ---
 
 ## Directory Structure
+```
 data/
 │
 ├── kalimantan-post-fire-images/ # Original Sentinel-2 tiles
@@ -28,7 +29,7 @@ data/
 ├── post_fire_with_indices.tif # Composite + NDVI/NBR
 ├── burn_training_samples.geojson # Labeled training points (burn / not burn)
 ├── burned_area_classified.tif # Final classified raster
-
+```
 
 ---
 
@@ -54,7 +55,7 @@ data/
 - Evaluate using a confusion matrix and feature importance
 
 ### 5. **Next Steps** 
-- Apply trained model to the full raster
+- Apply the trained model to the full raster
 - Generate classified burn map: `burned_area_classified.tif`
 
 Due to computing limitations, I was not able to complete this.
