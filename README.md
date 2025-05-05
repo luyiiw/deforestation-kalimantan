@@ -1,25 +1,26 @@
 # Burned Area Classification in Central Kalimantan Using Sentinel-2 and Random Forest
+Author: Lu Yii Wong
 
 This project uses Sentinel-2 imagery and a Random Forest classifier to map burned areas in Central Kalimantan, Indonesia, following the 2019 fire season. The workflow involves satellite data preprocessing, training sample preparation, spectral index computation, and supervised classification.
 
 ---
 
-## 🔍 Study Area
+## Study Area
 
 - **Region**: Pulang Pisau Regency, Central Kalimantan, Indonesia
 - **Timeframe**: Post-fire season (September–December 2019)
 
 ---
 
-## 🛰️ Data Sources
+## Data Sources
 
-- **Sentinel-2 L2A imagery** (10 bands, 10–20 m resolution)
-- **Labeled training points** manually digitized in QGIS (burn / not burn)
+- **Sentinel-2 L2A imagery:** 10 bands, 10–20 m resolution
+- **Labeled training points:** manually digitized in ArcGIS (burn / not burn)
 - **Derived indices**: NDVI, NBR
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 data/
 │
 ├── kalimantan-post-fire-images/ # Original Sentinel-2 tiles
@@ -31,7 +32,7 @@ data/
 
 ---
 
-## ⚙️ Workflow Overview
+## Workflow Overview
 
 ### 1. **Data Preparation**
 - Mosaic multiple Sentinel-2 tiles using `rasterio.merge`
@@ -43,7 +44,7 @@ data/
 - Save all bands and indices into a stacked raster: `post_fire_with_indices.tif`
 
 ### 3. **Training Sample Creation**
-- Digitize labeled points in QGIS (class = "burn" or "not burn")
+- Digitize labeled points in ArcGIS (class = "burn" or "not burn")
 - Export to `burn_training_samples.geojson`
 - Sample raster values at point locations and build a labeled DataFrame
 
@@ -52,13 +53,15 @@ data/
 - Train/test split: 80/20
 - Evaluate using a confusion matrix and feature importance
 
-### 5. **Inference**
+### 5. **Next Steps** 
 - Apply trained model to the full raster
 - Generate classified burn map: `burned_area_classified.tif`
 
+Due to computing limitations, I was not able to complete this.
+
 ---
 
-## 🧠 Requirements
+## Requirements
 
 - Python 3.9+
 - `rasterio`, `geopandas`, `scikit-learn`, `numpy`, `matplotlib`, `joblib`, `seaborn`
